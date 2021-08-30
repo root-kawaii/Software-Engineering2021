@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polimi.ingsw.client.GUI.LeadersController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1024.0" layoutX="136.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="136.8089599609375" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../images/PlayerBoard_Back.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <VBox alignment="CENTER" layoutY="157.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1280.0" spacing="32.0">
+         <children>
+            <HBox alignment="CENTER" spacing="32.0">
+               <children>
+                  <ImageView fx:id="imageView1" fitHeight="256.0" onMouseClicked="#imageView1Clicked" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageView2" fitHeight="256.0" onMouseClicked="#imageView2Clicked" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageView3" fitHeight="256.0" onMouseClicked="#imageView3Clicked" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageView4" fitHeight="256.0" onMouseClicked="#imageView4Clicked" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <Label style="-fx-background-color: white; -fx-background-radius: 8;" text="Choose two leader cards by clicking on them">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonChoose" disable="true" mnemonicParsing="false" onAction="#buttonChooseAction" text="Choose">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

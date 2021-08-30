@@ -1,0 +1,230 @@
+{
+    "leader1" : {
+      "ID" : 49,
+      "victoryPoints" : 2,
+      "req1" : {
+        "colour" : "YELLOW",
+        "amount" : 1
+      },
+      "req2" : {
+        "colour" : "GREEN",
+        "amount" : 1
+      },
+      "bonus" : {
+        "discount" : "SERVANT"
+      }
+    },
+    "leader2" : {
+      "ID" : 50,
+      "victoryPoints" : 2,
+      "req1" : {
+        "colour" : "BLUE",
+        "amount" : 1
+      },
+      "req2" : {
+        "colour" : "PURPLE",
+        "amount" : 1
+      },
+      "bonus" : {
+        "discount" : "SHIELD"
+      }
+    },
+    "leader3" : {
+      "ID" : 51,
+      "victoryPoints" : 2,
+      "req1" : {
+        "colour" : "GREEN",
+        "amount" : 1
+      },
+      "req2" : {
+        "colour" : "BLUE",
+        "amount" : 1
+      },
+      "bonus" : {
+        "discount" : "STONE"
+      }
+    },
+    "leader4" : {
+      "ID" : 52,
+      "victoryPoints" : 2,
+      "req1" : {
+        "colour" : "YELLOW",
+        "amount" : 1
+      },
+      "req2" : {
+        "colour" : "PURPLE",
+        "amount" : 1
+      },
+      "bonus" : {
+        "discount" : "COIN"
+      }
+    },
+    "leader5" : {
+      "ID" : 53,
+      "victoryPoints" : 3,
+      "req1" : {
+        "resource" : "COIN",
+        "amount" : 5
+      },
+      "bonus" : {
+        "storage" : "STONE",
+        "amount" : 2
+      }
+    },
+    "leader6" : {
+      "ID" : 54,
+      "victoryPoints" : 3,
+      "req1" : {
+        "resource" : "STONE",
+        "amount" : 5
+      },
+      "bonus" : {
+        "storage" : "SERVANT",
+        "amount" : 2
+      }
+    },
+    "leader7" : {
+      "ID" : 55,
+      "victoryPoints" : 3,
+      "req1" : {
+        "resource" : "SERVANT",
+        "amount" : 5
+      },
+      "bonus" : {
+        "storage" : "SHIELD",
+        "amount" : 2
+      }
+    },
+    "leader8" : {
+      "ID" : 56,
+      "victoryPoints" : 3,
+      "req1" : {
+        "resource" : "SHIELD",
+        "amount" : 5
+      },
+      "bonus" : {
+        "storage" : "COIN",
+        "amount" : 2
+      }
+    },
+    "leader9" : {
+      "ID" : 57,
+      "victoryPoints" : 5,
+      "req1" : {
+        "colour" : "YELLOW",
+        "amount" : 2
+      },
+      "req2" : {
+        "colour" : "BLUE",
+        "amount": 1
+      },
+      "bonus" : {
+        "marble" : "PURPLE"
+      }
+    },
+    "leader10" : {
+      "ID" : 58,
+      "victoryPoints" : 5,
+      "req1" : {
+        "colour" : "GREEN",
+        "amount" : 2
+      },
+      "req2" : {
+        "colour" : "PURPLE",
+        "amount" : 1
+      },
+      "bonus" : {
+        "marble" : "BLUE"
+      }
+    },
+    "leader11" : {
+      "ID" : 59,
+      "victoryPoints" : 5,
+      "req1" : {
+        "colour" : "BLUE",
+        "amount" : 1
+      },
+      "req2" : {
+        "colour" : "YELLOW",
+        "amount" : 1
+      },
+      "bonus" : {
+        "marble" : "GREY"
+      }
+    },
+    "leader12" : {
+      "ID" : 60,
+      "victoryPoints" : 5,
+      "req1" : {
+        "colour" : "PURPLE",
+        "amount" : 2
+      },
+      "req2" : {
+        "colour" : "GREEN",
+        "amount" : 1
+      },
+      "bonus" : {
+        "marble" : "YELLOW"
+      }
+    },
+    "leader13" : {
+      "ID" : 61,
+      "victoryPoints" : 4,
+      "req1" : {
+        "colour" : "YELLOW",
+        "level" : 2,
+        "amount" : 1
+      },
+      "bonus" : {
+        "production" : {
+          "req" : ["SHIELD", 1],
+          "prod" : ["CHOICE", 1, "FAITH", 1]
+        }
+      }
+    },
+    "leader14" : {
+      "ID" : 62,
+      "victoryPoints" : 4,
+      "req1" : {
+        "colour" : "BLUE",
+        "level" : 2,
+        "amount" : 1
+      },
+      "bonus" : {
+        "production" : {
+          "req" : ["SERVANT", 1],
+          "prod" : ["CHOICE", 1, "FAITH", 1]
+        }
+      }
+    },
+    "leader15" : {
+      "ID" : 63,
+      "victoryPoints" : 4,
+      "req1" : {
+        "colour" : "PURPLE",
+        "level" : 2,
+        "amount" : 1
+      },
+      "bonus" : {
+        "production" :{
+          "req" : ["STONE", 1],
+          "prod" : ["CHOICE", 1, "FAITH", 1]
+        }
+      }
+    },
+    "leader16" : {
+      "ID" : 64,
+      "victoryPoints" : 4,
+      "req1" : {
+        "colour" : "GREEN",
+        "level" : 2,
+        "amount" : 1
+      },
+      "bonus" : {
+        "production" : {
+          "req" : ["COIN",  1],
+          "prod" : ["CHOICE", 1, "FAITH", 1]
+        }
+      }
+    }
+}

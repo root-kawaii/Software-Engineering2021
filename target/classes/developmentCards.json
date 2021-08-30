@@ -1,0 +1,434 @@
+{
+    "development1" :{
+      "ID": 1,
+      "victoryPoints" : 1,
+      "colour" : "GREEN",
+      "level" : 1,
+      "cost" : ["SHIELD", 2],
+      "req" : ["COIN", 1],
+      "prod" : ["FAITH", 1]
+    },
+    "development2" :{
+      "ID": 2,
+      "victoryPoints" : 1,
+      "colour" : "PURPLE",
+      "level" : 1,
+      "cost" : ["SERVANT", 2],
+      "req" : ["STONE",  1],
+      "prod" : ["FAITH", 1]
+    },
+    "development3" :{
+      "ID": 3,
+      "victoryPoints" : 1,
+      "colour" : "BLUE",
+      "level" : 1,
+      "cost" : ["COIN", 2],
+      "req" : ["SHIELD", 1],
+      "prod" : ["FAITH", 1]
+    },
+    "development4" :{
+      "ID": 4,
+      "victoryPoints" : 1,
+      "colour" : "YELLOW",
+      "level" : 1,
+      "cost" : ["STONE", 2],
+      "req" : ["SERVANT", 1],
+      "prod" : ["FAITH", 1]
+    },
+    "development5" :{
+      "ID": 5,
+      "victoryPoints" : 2,
+      "colour" : "GREEN",
+      "level" : 1,
+      "cost" : ["SHIELD", 1, "SERVANT", 1, "STONE", 1],
+      "req" : ["STONE", 1],
+      "prod" : ["SERVANT", 1]
+    },
+    "development6" :{
+      "ID": 6,
+      "victoryPoints" : 2,
+      "colour" : "PURPLE",
+      "level" : 1,
+      "cost" : ["SHIELD", 1, "SERVANT", 1, "COIN", 1],
+      "req" : ["COIN", 1],
+      "prod" : ["SHIELD", 1]
+    },
+    "development7" :{
+      "ID": 7,
+      "victoryPoints" : 2,
+      "colour" : "BLUE",
+      "level" : 1,
+      "cost" : ["COIN", 1, "SERVANT", 1, "STONE", 1],
+      "req" : ["SERVANT", 1],
+      "prod" : ["STONE", 1]
+    },
+    "development8" :{
+      "ID": 8,
+      "victoryPoints" : 2,
+      "colour" : "YELLOW",
+      "level" : 1,
+      "cost" : ["SHIELD", 1, "STONE", 1, "COIN", 1],
+      "req" : ["SHIELD", 1],
+      "prod" : ["COIN", 1]
+    },
+    "development9" :{
+      "ID": 9,
+      "victoryPoints" : 3,
+      "colour" : "GREEN",
+      "level" : 1,
+      "cost" : ["SHIELD", 3],
+      "req" : ["SERVANT", 2],
+      "prod" : ["COIN", 1, "SHIELD", 1, "STONE", 1]
+    },
+    "development10" :{
+      "ID": 10,
+      "victoryPoints" : 3,
+      "colour" : "PURPLE",
+      "level" : 1,
+      "cost" : ["SERVANT", 3],
+      "req" : ["COIN", 2],
+      "prod" : ["SERVANT", 1, "SHIELD", 1, "STONE", 1]
+    },
+    "development11" :{
+      "ID": 11,
+      "victoryPoints" : 3,
+      "colour" : "BLUE",
+      "level" : 1,
+      "cost" : ["COIN", 3],
+      "req" : ["STONE", 2],
+      "prod" : ["COIN", 1, "SERVANT", 1, "SHIELD", 1]
+    },
+    "development12" :{
+      "ID": 12,
+      "victoryPoints" : 3,
+      "colour" : "YELLOW",
+      "level" : 1,
+      "cost" : ["STONE", 3],
+      "req" : ["SHIELD", 2],
+      "prod" : ["COIN", 1, "SERVANT", 1, "STONE", 1]
+    },
+    "development13" :{
+      "ID": 13,
+      "victoryPoints" : 4,
+      "colour" : "GREEN",
+      "level" : 1,
+      "cost" : ["SHIELD", 2, "COIN", 2],
+      "req" : ["STONE", 1, "SERVANT", 1],
+      "prod" : ["COIN", 2, "FAITH", 1]
+    },
+    "development14" :{
+      "ID": 14,
+      "victoryPoints" : 4,
+      "colour" : "PURPLE",
+      "level" : 1,
+      "cost" : ["SERVANT", 2, "STONE", 2],
+      "req" : ["COIN", 1, "SHIELD", 1],
+      "prod" : ["STONE", 2, "FAITH", 1]
+    },
+    "development15" :{
+      "ID": 15,
+      "victoryPoints" : 4,
+      "colour" : "BLUE",
+      "level" : 1,
+      "cost" : ["COIN", 2, "SERVANT", 2],
+      "req" : ["SHIELD", 1, "STONE", 1],
+      "prod" : ["SERVANT", 2, "FAITH", 1]
+    },
+    "development16" :{
+        "ID": 16,
+      "victoryPoints" : 4,
+      "colour" : "YELLOW",
+      "level" : 1,
+      "cost" : ["STONE", 2, "SHIELD", 2],
+      "req" : ["COIN", 1, "SERVANT", 1],
+      "prod" : ["SHIELD", 2, "FAITH", 1]
+    },
+    "development17" :{
+      "ID": 17,
+      "victoryPoints" : 5,
+      "colour" : "GREEN",
+      "level" : 2,
+      "cost" : ["SHIELD", 4],
+      "req" : ["STONE", 1],
+      "prod" : ["FAITH", 2]
+    },
+    "development18" :{
+      "ID": 18,
+      "victoryPoints" : 5,
+      "colour" : "PURPLE",
+      "level" : 2,
+      "cost" : ["SERVANT", 4],
+      "req" : ["COIN", 1],
+      "prod" : ["FAITH", 2]
+    },
+    "development19" :{
+      "ID": 19,
+      "victoryPoints" : 5,
+      "colour" : "BLUE",
+      "level" : 2,
+      "cost" : ["COIN", 4],
+      "req" : ["SERVANT", 1],
+      "prod" : ["FAITH", 2]
+    },
+    "development20" :{
+      "ID": 20,
+      "victoryPoints" : 5,
+      "colour" : "YELLOW",
+      "level" : 2,
+      "cost" : ["STONE", 4],
+      "req" : ["SHIELD", 1],
+      "prod" : ["FAITH", 2]
+    },
+    "development21" :{
+      "ID": 21,
+      "victoryPoints" : 6,
+      "colour" : "GREEN",
+      "level" : 2,
+      "cost" : ["SHIELD", 3, "SERVANT", 2],
+      "req" : ["SHIELD", 1, "SERVANT", 1],
+      "prod" : ["STONE", 3]
+    },
+    "development22" :{
+      "ID": 22,
+      "victoryPoints" : 6,
+      "colour" : "PURPLE",
+      "level" : 2,
+      "cost" : ["SERVANT", 3, "COIN", 2],
+      "req" : ["COIN", 1, "SERVANT", 1],
+      "prod" : ["SHIELD", 3]
+    },
+    "development23" :{
+      "ID": 23,
+      "victoryPoints" : 6,
+      "colour" : "BLUE",
+      "level" : 2,
+      "cost" : ["COIN", 3, "STONE", 2],
+      "req" : ["COIN", 1, "STONE", 1],
+      "prod" : ["SERVANT", 3]
+    },
+    "development24" :{
+      "ID": 24,
+      "victoryPoints" : 6,
+      "colour" : "YELLOW",
+      "level" : 2,
+      "cost" : ["STONE", 3, "SHIELD", 2],
+      "req" : ["STONE", 1, "SHIELD", 1],
+      "prod" : ["COIN", 3]
+    },
+    "development25" :{
+      "ID": 25,
+      "victoryPoints" : 7,
+      "colour" : "GREEN",
+      "level" : 2,
+      "cost" : ["SHIELD", 5],
+      "req" : ["COIN", 2],
+      "prod" : ["STONE", 2, "FAITH", 2]
+    },
+    "development26" :{
+      "ID": 26,
+      "victoryPoints" : 7,
+      "colour" : "PURPLE",
+      "level" : 2,
+      "cost" : ["SERVANT", 5],
+      "req" : ["STONE", 2],
+      "prod" : ["COIN", 2, "FAITH", 2]
+    },
+    "development27" :{
+      "ID": 27,
+      "victoryPoints" : 7,
+      "colour" : "BLUE",
+      "level" : 2,
+      "cost" : ["COIN", 5],
+      "req" : ["SERVANT", 2],
+      "prod" : ["SHIELD", 2, "FAITH", 2]
+    },
+    "development28" :{
+      "ID": 28,
+      "victoryPoints" : 7,
+      "colour" : "YELLOW",
+      "level" : 2,
+      "cost" : ["STONE", 5],
+      "req" : ["SHIELD", 2],
+      "prod" : ["SERVANT", 2, "FAITH", 2]
+    },
+    "development29" :{
+      "ID": 29,
+      "victoryPoints" : 8,
+      "colour" : "GREEN",
+      "level" : 2,
+      "cost" : ["SHIELD", 3, "COIN", 3],
+      "req" : ["COIN", 1],
+      "prod" : ["SHIELD", 2, "FAITH", 1]
+    },
+    "development30" :{
+      "ID": 30,
+      "victoryPoints" : 8,
+      "colour" : "PURPLE",
+      "level" : 2,
+      "cost" : ["SERVANT", 3, "SHIELD", 3],
+      "req" : ["STONE", 1],
+      "prod" : ["SERVANT", 2, "FAITH", 1]
+    },
+    "development31" :{
+      "ID": 31,
+      "victoryPoints" : 8,
+      "colour" : "BLUE",
+      "level" : 2,
+      "cost" : ["COIN", 3, "STONE", 3],
+      "req" : ["SERVANT", 1],
+      "prod" : ["STONE", 2, "FAITH", 1]
+    },
+    "development32" :{
+      "ID": 32,
+      "victoryPoints" : 8,
+      "colour" : "YELLOW",
+      "level" : 2,
+      "cost" : ["STONE", 3, "SERVANT", 3],
+      "req" : ["SHIELD", 1],
+      "prod" : ["COIN", 2, "FAITH", 1]
+    },
+    "development33" :{
+      "ID": 33,
+      "victoryPoints" : 9,
+      "colour" : "GREEN",
+      "level" : 3,
+      "cost" : ["SHIELD", 6],
+      "req" : ["COIN", 2],
+      "prod" : ["STONE", 3, "FAITH", 2]
+    },
+    "development34" :{
+      "ID": 34,
+      "victoryPoints" : 9,
+      "colour" : "PURPLE",
+      "level" : 3,
+      "cost" : ["SERVANT", 6],
+      "req" : ["STONE", 2],
+      "prod" : ["COIN", 3, "FAITH", 2]
+    },
+    "development35" :{
+      "ID": 35,
+      "victoryPoints" : 9,
+      "colour" : "BLUE",
+      "level" : 3,
+      "cost" : ["COIN", 6],
+      "req" : ["SERVANT", 2],
+      "prod" : ["SHIELD", 3, "FAITH", 2]
+    },
+    "development36" :{
+      "ID": 36,
+      "victoryPoints" : 9,
+      "colour" : "YELLOW",
+      "level" : 3,
+      "cost" : ["STONE", 6],
+      "req" : ["SHIELD", 2],
+      "prod" : ["SERVANT", 3, "FAITH", 2]
+    },
+    "development37" :{
+      "ID": 37,
+      "victoryPoints" : 10,
+      "colour" : "GREEN",
+      "level" : 3,
+      "cost" : ["SHIELD", 5, "SERVANT", 2],
+      "req" : ["COIN", 1, "SERVANT", 1],
+      "prod" : ["SHIELD", 2, "STONE", 2, "FAITH", 1]
+    },
+    "development38" :{
+      "ID": 38,
+      "victoryPoints" : 10,
+      "colour" : "PURPLE",
+      "level" : 3,
+      "cost" : ["SERVANT", 5, "COIN", 2],
+      "req" : ["STONE", 1, "SHIELD", 1],
+      "prod" : ["COIN", 2, "SERVANT", 2, "FAITH", 1]
+    },
+    "development39" :{
+      "ID": 39,
+      "victoryPoints" : 10,
+      "colour" : "BLUE",
+      "level" : 3,
+      "cost" : ["COIN", 5, "STONE", 2],
+      "req" : ["COIN", 1, "SHIELD", 1],
+      "prod" : ["SERVANT", 2, "STONE", 2, "FAITH", 1]
+    },
+    "development40" :{
+      "ID": 40,
+      "victoryPoints" : 10,
+      "colour" : "YELLOW",
+      "level" : 3,
+      "cost" : ["STONE", 5, "SERVANT", 2],
+      "req" : ["STONE", 1, "SERVANT", 1],
+      "prod" : ["COIN", 2, "SHIELD", 2, "FAITH", 1]
+    },
+    "development41" :{
+      "ID": 41,
+      "victoryPoints" : 11,
+      "colour" : "GREEN",
+      "level" : 3,
+      "cost" : ["SHIELD", 7],
+      "req" : ["SERVANT", 1],
+      "prod" : ["COIN", 1, "FAITH", 3]
+    },
+    "development42" :{
+      "ID": 42,
+      "victoryPoints" : 11,
+      "colour" : "PURPLE",
+      "level" : 3,
+      "cost" : ["SERVANT", 7],
+      "req" : ["COIN", 1],
+      "prod" : ["STONE", 1, "FAITH", 3]
+    },
+    "development43" :{
+      "ID": 43,
+      "victoryPoints" : 11,
+      "colour" : "BLUE",
+      "level" : 3,
+      "cost" : ["COIN", 7],
+      "req" : ["STONE", 1],
+      "prod" : ["SHIELD", 1, "FAITH", 3]
+    },
+    "development44" :{
+      "ID": 44,
+      "victoryPoints" : 11,
+      "colour" : "YELLOW",
+      "level" : 3,
+      "cost" : ["STONE", 7],
+      "req" : ["SHIELD", 1],
+      "prod" : ["SERVANT", 1, "FAITH", 3]
+    },
+    "development45" :{
+      "ID": 45,
+      "victoryPoints" : 12,
+      "colour" : "GREEN",
+      "level" : 3,
+      "cost" : ["SHIELD", 4, "COIN", 4],
+      "req" : ["STONE", 1],
+      "prod" : ["COIN", 3, "SHIELD", 1]
+    },
+    "development46" :{
+      "ID": 46,
+      "victoryPoints" : 12,
+      "colour" : "PURPLE",
+      "level" : 3,
+      "cost" : ["SERVANT", 4, "SHIELD", 4],
+      "req" : ["COIN", 1],
+      "prod" : ["STONE", 3, "SERVANT", 1]
+    },
+    "development47" :{
+      "ID": 47,
+      "victoryPoints" : 12,
+      "colour" : "BLUE",
+      "level" : 3,
+      "cost" : ["COIN", 4, "STONE", 4],
+      "req" : ["SERVANT", 1],
+      "prod" : ["COIN", 1, "SHIELD", 3]
+    },
+    "development48" :{
+      "ID": 48,
+      "victoryPoints" : 12,
+      "colour" : "YELLOW",
+      "level" : 3,
+      "cost" : ["STONE", 4, "SERVANT", 4],
+      "req" : ["SHIELD", 1],
+      "prod" : ["STONE", 1, "SERVANT", 3]
+    }
+}

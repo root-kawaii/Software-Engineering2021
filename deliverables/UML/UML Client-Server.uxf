@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>60</y>
+      <w>240</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*Server*
+-
+-logger: Logger
+-quit: bool
+-clientListener: Thread
+-lobbies: ArrayList&lt;Lobby&gt;
+-waitingList: ArrayList&lt;ClientHandler&gt;
+-lobbyID: int
+-lobbyReconnecting: Lobby
+-clientReconnecting: ClientHandler
+-playerReconnecting: Player
+-
++main()
++addWaiting(client: ClientHandler)
++okReconnect()
++koReconnect()
+-tableStatus()
+-playerStatus(Player)
++removeLobby(lobby: Lobby)
++run()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>390</y>
+      <w>270</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*Lobby*
+-
+-logger: Logger
+-server: Server
+-running: bool
+-quit: bool
+-lobbyID: int
+-maxPlayers: int
+-clients: ArrayList&lt;ClientHandler&gt;
+-commandQueue: ArrayList&lt;Command&gt;
+-
++updateClients()
++getClientByID()
++addPlayer(ClientHandler)
++insertPlyer(ClientHandler)
++addCommand(Command)
++checkSetup()
++startGame()
++endGame()
++askMaxPlayers()
++sendMaxPlayers()
++askUsername
++sendUsername
++run()
++getters()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>0</y>
+      <w>220</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*ClientHandler*
+-
+-server: Server
+-socket: Socket
+-in: Scanner
+-out: PrintWriter
+-clientID: int
+-username: String
+-gson: Gson
+-
++getClientID()
++setLobby(lobby: Lobby)
++getUsername()
++setUsername(username: String)
++sendMessage(message: String)
++close()
++run()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>100</y>
+      <w>180</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*ClientListener*
+-
+-server: Server
+-logger: Logger
+-mainSocket: ServerSocket
+-clientID: int
+-
++run()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>130</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>80</y>
+      <w>330</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>310.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>150</y>
+      <w>310</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;280.0;130.0;280.0;130.0;10.0;290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>360</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>340</y>
+      <w>260</w>
+      <h>630</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*/Client/*
+-
+-quit: bool
+-socket: Socket
+-out: PrintWriter
+-username: String
+-clientID: int
+-commandQueue: ArrayList&lt;Command&gt;
+-gson: Gson
+-listener: ServerListener
+-table: Table
+-boards: HashMap&lt;Integer, Board&gt;
+-
++setup()
++addCommand(Command)
++reconnect(String)
++updateStatus(int, String[])
++updateID(int, int)
++sendMessage(Command)
++connectionOK(int)
++askMaxPlayers()
++askUsername
++invalidUsername()
++setMarbles(String[])
++setDecks(String[])
++askLeader(String[])
++startGame(String[])
++endGame(int, String)
++startTurn(int)
++chooseResource(int, int)
++invalidMove(int)
++resourceGain(int)
++okAddResource(int)
++koAddResource(int)
++addCard(int, int, int)
++addLeader(int, int, int)
++generic(Command)
++run()
++getters()
++setters()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>510</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*CLI*
+-
+-
++run()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>590</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*GUI*
+-
+-
++run()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1090</x>
+      <y>600</y>
+      <w>190</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1090</x>
+      <y>530</y>
+      <w>190</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1170</x>
+      <y>390</y>
+      <w>130</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*ServerListener*
+-
+-socket: Socket
+-in: InputStream
+-
++run()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1090</x>
+      <y>410</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>250</y>
+      <w>280</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;260.0;40.0;260.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>940</x>
+      <y>250</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>500</x>
+      <y>850</y>
+      <w>220</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*ClientParser*
+-
+-client: Client
+-match: Match
+-mainController: MainController
+-
++parse()
++setGame()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>900</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>r2=-parser</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>460</y>
+      <w>230</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*ServerParser*
+-
+-lobby: Lobby
+-match: Match
+-mainController: MainController
+-playerController: PlayerController
+-boardController: BoardController
+-marketController: MarketController
+-
++parse()
++setGame()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>490</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>r2=-parser</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1480</x>
+      <y>590</y>
+      <w>180</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*Display*
+-
+-online: boolean
+-stage: Stage
+-gui: GUI
+-boards: HashMap&lt;Integer, Scene&gt;
+-boardControllers: HashMap &lt;Integer, PlayerBoardController&gt;
+-table: Scene
+-tableController: TableController
+-
++start(Stage)
++setup()
++askMaxPlayers()
++askUsername(boolean)
++askLeaders(int[])
++startGame()
++endgame()
++updateID
++reconnect(String)
++switchView(int)
++run()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1520</x>
+      <y>50</y>
+      <w>150</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*Turn*
+-
+-
++takeTurn()
++getChoiceResource()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1370</x>
+      <y>80</y>
+      <w>170</w>
+      <h>470</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;450.0;40.0;450.0;40.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1520</x>
+      <y>350</y>
+      <w>150</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+_*ANSI*_
+-
++textColours: String
+-
++placeCursor(int, int)
++moveCursor(int, int)
++clearLine()
++clearScreen()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1370</x>
+      <y>370</y>
+      <w>170</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;180.0;80.0;180.0;80.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1370</x>
+      <y>600</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1250</x>
+      <y>690</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*JavaFX Controllers*
+-
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1310</x>
+      <y>630</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1380</x>
+      <y>700</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1520</x>
+      <y>150</y>
+      <w>150</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+_*Draw*_
+-
+-cardBase: String[]
+-info: String[]
+-
++drawBoard(Board)
++drawStorage(int, int, HashMap)
++drawTemp(int, int, Arraylist)
++drawCard(int, int,Card)
++drawTable(Table)
++drawInfo(int, int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1370</x>
+      <y>190</y>
+      <w>170</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;350.0;60.0;350.0;60.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>740</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+&lt;&lt;enumeration&gt;&gt;
+*Messages*
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>850</y>
+      <w>140</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*Command*
+-
+-clientID: int
+-message: Messages
+-args: String[]
+-
++getters()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>780</y>
+      <w>110</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>90.0;70.0;90.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>860</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>620</y>
+      <w>210</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;270.0;190.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>230</y>
+      <w>560</w>
+      <h>640</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>540.0;10.0;430.0;10.0;430.0;570.0;10.0;570.0;10.0;620.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>810</y>
+      <w>480</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;40.0;10.0;10.0;460.0;10.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>180</y>
+      <w>150</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*MainController*
+-
+-match: Match
+-lobby: Lobby
+-
++addPlayer(String, int)
++startTurn()
++endTurn()
++declareWinner()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>180</y>
+      <w>310</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*MarketController*
+-
+-mainController: MainController
+-match: Match
+-lobby: Lobby
+-bonus: int
+-bonus2: int
+-
++insertMarble(int)
++buyCard(DevelopmentCard, Map, Map, int, int)
++checkBonusStorage(int, Resource)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>540</y>
+      <w>400</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*BoardController*
+-
+-match: Match
+-lobby: Lobby
+-bonus: int
+-bonus2: int
+-
++chooseResource(int, String[])
++activateProduction(Production, Player, Map, Map, Resource)
++activateBaseProduction(Map, Map, Resource)
++addfaith(Player, int)
++checkPope(Player player)
++checkBonusStorage(int, Resource)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>970</x>
+      <y>180</y>
+      <w>260</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*PlayerController*
+-
+-match: Match
+-lobby: Lobby
+-leaderCards: LeaderCard[]
+-mainController: MainController
+-
++askLeaders()
++chooseLeaders(int, int, int)
++discardLeader(int)
++checkActivateLeader(LeaderCard)
++insertLeader(int boolean)
++removeResource(Resource, boolean)
++useLeaderCard()
++disconnected()
++addVictoryPoints()
++getters()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>380</y>
+      <w>230</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*ComputerPlayerController*
+-
+-lobby: Lobby
+-table: Table
+-computerPlayer: ComputerPlayer
+-
++popCards(Marker)
++addFaithPoints(int)
++computerTurn()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>300</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>240</y>
+      <w>160</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>820</x>
+      <y>240</y>
+      <w>170</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+</diagram>

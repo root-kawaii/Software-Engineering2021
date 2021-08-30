@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polimi.ingsw.client.GUI.MaxPlayersController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1024.0" layoutX="136.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="136.8089599609375" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../images/PlayerBoard_Back.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <VBox alignment="CENTER" layoutX="320.0" spacing="32.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Logo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-background-color: white; -fx-background-radius: 8;" text="Choose the number of players for this game" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" spacing="32.0">
+               <children>
+                  <Button fx:id="button1" mnemonicParsing="false" onAction="#button1Action" prefHeight="64.0" prefWidth="64.0" text="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button2" mnemonicParsing="false" onAction="#button2Action" prefHeight="64.0" prefWidth="64.0" text="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button3" mnemonicParsing="false" onAction="#button3Action" prefHeight="64.0" prefWidth="64.0" text="3">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button4" mnemonicParsing="false" onAction="#button4Action" prefHeight="64.0" prefWidth="64.0" text="4">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Label fx:id="labelWaiting" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white; -fx-background-radius: 8;" text="Waiting for players" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</AnchorPane>

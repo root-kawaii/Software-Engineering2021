@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>60</y>
+      <w>140</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*Match*
+-
+-gameId: int
+-gameStatus: bool
+-players: Player[1..4]
+-playerTurn: int
+-market: Market
+-lastTurn: boolean
+-winner: Player
+-
++addPlayer(Player)
++getters()
++setters()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>0</y>
+      <w>200</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*Player*
+-
+-username: string
+-clientID: int
+-connected: boolean
+-faithPoints: int
+-victoryPoints: int
+-table: Table
+-bonus: ArrayList&lt;Bonus&gt;
+-hand: ArrayList&lt;LeaderCard&gt;
+-
++addLeader(LeaderCard)
++removeLeader(LeaderCard)
++addVictoryPoints(int)
++addFaithPoints(int)
++handleFaithPoints(int)
++vaticanReport(int)
++getters()
++setters()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>190</y>
+      <w>230</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>r1=-match</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>140</y>
+      <w>180</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+&lt;&lt;static&gt;&gt;
+*ComputerPlayer*
+-
+-markers: Marker[7]
+-usernames: String
+-faithPoints: int
+-
++newMarkers()
++popMarker(): Marker
++addfaithPoints(int)
++getters()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>850</y>
+      <w>100</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+&lt;&lt;enumeration&gt;&gt;
+*Marker*
+-
+BLUE
+GREEN
+YELLOW
+PURPLE
+SHUFFLE
+FAITH</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>310</y>
+      <w>270</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*Table*
+-
+-decks: List&lt;Stack&lt;DevelopmentCard\&gt;&gt;
+-cards: DevelopmentCards[]
+-
++createDeck()
++addInStack()
++removeCard(DevelopmentCard)
++removeCard(int)
++sendDecks()
++getters()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>250</y>
+      <w>70</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>r1=-match
+r2=-table</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>340</y>
+      <w>340</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*Market*
+-
+-colour: MarbleColour[4][3]
+-extraMarble: Colour
+-resourceGain: EnumMap&lt;MarbleColour, Integer&gt;
+-
++insertMarble(x): EnumMap&lt;MarbleColour, Integer&gt;
++createReturnX(MarbleColour[][], int)
++createReturnY(MarbleColour[][], int)
++updateMarbles()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1010</x>
+      <y>360</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r1= -market</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>810</y>
+      <w>100</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+&lt;&lt;enumeration&gt;&gt;
+*MarbleColour*
+-
+WHITE
+RED
+YELLOW
+BLUE
+GREY
+PURPLE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>400</y>
+      <w>230</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*PlayerBoard*
+-
+-clientID: int
+-numberCards: int
+-col1: ArrayList&lt;DevelopmentCard&gt;
+-col2: ArrayList&lt;DevelopmentCard&gt;
+-col3: ArrayList&lt;DevelopmentCard&gt;
+-leaders: ArrayList&lt;LeaderCard&gt;
+-match: Match
+-
++addCard(DevelopmentCard)
++addCard(LeaderCard)
++getters()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>280</y>
+      <w>110</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r2=-playerBoard</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>310</y>
+      <w>270</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*Storage*
+-
+-clientID: int
+-count: int
+-shelves: HashMap&lt;Resource, int&gt;
+-extra1: HashMap&lt;Resource, int&gt;
+-extra2: HashMap&lt;Resource, int&gt;
+-strongBox: HashMap&lt;Resource, int&gt;
+-temp: ArrayList&lt;Resource&gt;
+-
++addResource(Resource, int)
++removeStrorage(Resource, int)
++checkIfAddable(Resource, int): boolean
++addInStrongBox(Resource, int)
++removeBox(Resource, int)
++createExtra(Resource)
++addInExtra(Resource, quantity)
++removeExtra(Resource, quantity)
++addTemp(Resource)
++removeTemp(Resource)
++getters()
++setters()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>500</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r2=-storage</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>690</y>
+      <w>100</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+&lt;&lt;enumeration&gt;&gt;
+*Resource*
+-
+COIN
+SERVANT
+SHIELD
+STONE
+FAITH
+CHOICE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>650</y>
+      <w>150</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*FaithTrack*
+-
+-tiles: FaithTile[20]
+-popeTile1: boolean
+-popeTile2: boolean
+-popeTile3: boolean
+-
++isPopeTile(): boolean
++getTile(pos)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>590</y>
+      <w>90</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r2=-faithTrack</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>820</y>
+      <w>120</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*FaithTile*
+-
+-position: int
+-type: TileType
+-vaticanZone: int
+-
++getters()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>770</y>
+      <w>40</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=20</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>690</y>
+      <w>100</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+&lt;&lt;enumeration&gt;&gt;
+*TileType*
+-
+BLANK
+POINTS
+POPE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>820</x>
+      <y>660</y>
+      <w>150</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*/Card/*
+-
+-ID: int
+-victoryPoints: int
+-
++getID: int
++getVictoryPoints(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>500</y>
+      <w>220</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*DevelopmentCard*
+-
+-level: int
+-colour: CardColour
+-cost: HashMap&lt;Resource, int&gt;
+-production: Production
+-
++clone(): Object
++getters()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>800</y>
+      <w>280</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*LeaderCard*
+-
+-req1: LeaderRequirement
+-req2: LeaderRequirement
+-bonus: Bonus
+-
++getRequirement1(): LeaderRequirement
++getRequirement2(): LeaderRequirement
++getBonus(x)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>550</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>890</x>
+      <y>470</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>570</y>
+      <w>100</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80.0;260.0;40.0;260.0;40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>620</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>750</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>970</y>
+      <w>100</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+&lt;&lt;enumeration&gt;&gt;
+*CardColour*
+-
+GREEN
+BLUE
+PURPLE
+YELLOW
+BLANK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>980</y>
+      <w>240</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*LeaderRequirement*
+-
+-level: int
+-colour: CardColour
+-resource: HashMap&lt;Resource, int&gt;
+-
++getters()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>930</y>
+      <w>90</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>70.0;10.0;70.0;30.0;10.0;30.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>980</y>
+      <w>160</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*Bonus*
+-
+-storage: String
+-discount: Resource
+-marble: MarbleColour
+-production: Production
+-type: BonusType
+-
++getters()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>930</y>
+      <w>80</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;30.0;60.0;30.0;60.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1030</x>
+      <y>640</y>
+      <w>270</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+*Production*
+-
+-requirements: EnumMap&lt;Resource, int&gt;
+-products: EnumMap&lt;Resource, int&gt;
+-
++getRequirements()
++getProducts()
++clone()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>540</y>
+      <w>200</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r2=-production</panel_attributes>
+    <additional_attributes>180.0;100.0;180.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1060</x>
+      <y>750</y>
+      <w>130</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r2=-production</panel_attributes>
+    <additional_attributes>110.0;10.0;110.0;260.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>970</x>
+      <y>180</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>r2=-computerPleyer</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>1010</y>
+      <w>100</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>bg=#7289DA
+&lt;&lt;enumeration&gt;&gt;
+*BonusType*
+-
+MARBLE
+STORAGE
+DISCOUNT
+PRODUCTION</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>140</x>
+      <y>160</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+Classes have a reference to
+lobby to send
+game state updates.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>250</y>
+      <w>130</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r2=-storage</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polimi.ingsw.client.GUI.TableController">
+   <children>
+      <GridPane alignment="CENTER" hgap="16.0" layoutX="64.0" layoutY="64.0" style="-fx-background-color: dimgrey; -fx-background-radius: 16;" vgap="16.0" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="64.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="card1" disable="true" fitHeight="192.0" fitWidth="123.0" onMouseClicked="#buy1" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="card2" disable="true" fitHeight="192.0" fitWidth="123.0" onMouseClicked="#buy2" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+            <ImageView fx:id="card3" disable="true" fitHeight="192.0" fitWidth="123.0" onMouseClicked="#buy3" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+            <ImageView fx:id="card4" disable="true" fitHeight="192.0" fitWidth="123.0" onMouseClicked="#buy4" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
+            <ImageView fx:id="card5" disable="true" fitHeight="192.0" fitWidth="123.0" onMouseClicked="#buy5" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+            <ImageView fx:id="card6" disable="true" fitHeight="192.0" fitWidth="123.0" onMouseClicked="#buy6" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fx:id="card7" disable="true" fitHeight="192.0" fitWidth="123.0" onMouseClicked="#buy7" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ImageView fx:id="card8" disable="true" fitHeight="192.0" fitWidth="123.0" onMouseClicked="#buy8" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ImageView fx:id="card9" disable="true" fitHeight="192.0" fitWidth="123.0" onMouseClicked="#buy9" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+            <ImageView fx:id="card10" disable="true" fitHeight="192.0" fitWidth="123.0" onMouseClicked="#buy10" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fx:id="card11" disable="true" fitHeight="192.0" fitWidth="123.0" onMouseClicked="#buy11" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ImageView fx:id="card12" disable="true" fitHeight="192.0" fitWidth="123.0" onMouseClicked="#buy12" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="702.0" layoutY="168.0" style="-fx-background-color: dimgrey; -fx-background-radius: 16;" AnchorPane.rightAnchor="148.0" AnchorPane.topAnchor="120.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="96.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="96.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="96.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="96.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="96.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="96.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="-Infinity" prefHeight="96.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="-Infinity" prefHeight="96.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="-Infinity" prefHeight="96.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="-Infinity" prefHeight="96.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="marble1" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+            <ImageView fx:id="marble2" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fx:id="marble3" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ImageView fx:id="marble4" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ImageView fx:id="marble5" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+            <ImageView fx:id="marble6" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fx:id="marble7" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ImageView fx:id="marble8" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <ImageView fx:id="marble9" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
+            <ImageView fx:id="marble10" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ImageView fx:id="marble11" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ImageView fx:id="marble12" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <ImageView fx:id="marbleExtra" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" />
+            <Button fx:id="buttonInsert6" disable="true" mnemonicParsing="false" onAction="#insert6" prefHeight="96.0" prefWidth="96.0" text="←" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonInsert5" disable="true" mnemonicParsing="false" onAction="#insert5" prefHeight="96.0" prefWidth="96.0" text="←" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonInsert4" disable="true" mnemonicParsing="false" onAction="#insert4" prefHeight="96.0" prefWidth="96.0" text="↑" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonInsert3" disable="true" mnemonicParsing="false" onAction="#insert3" prefHeight="96.0" prefWidth="96.0" text="↑" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonInsert2" disable="true" mnemonicParsing="false" onAction="#insert2" prefHeight="96.0" prefWidth="96.0" text="↑" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonInsert7" disable="true" mnemonicParsing="false" onAction="#insert7" prefHeight="96.0" prefWidth="96.0" text="←" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonInsert1" disable="true" mnemonicParsing="false" onAction="#insert1" prefHeight="96.0" prefWidth="96.0" text="↑" GridPane.rowIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <VBox layoutX="1141.0" layoutY="96.0" spacing="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0">
+         <children>
+            <Button fx:id="buttonViewPlayer1" mnemonicParsing="false" onAction="#viewPlayer1" prefHeight="48.0" prefWidth="96.0" text="View Player 1" />
+            <Button fx:id="buttonViewPlayer2" mnemonicParsing="false" onAction="#viewPlayer2" prefHeight="48.0" prefWidth="96.0" text="View Player 2" />
+            <Button fx:id="buttonViewPlayer3" mnemonicParsing="false" onAction="#viewPlayer3" prefHeight="48.0" prefWidth="96.0" text="View Player 3" />
+            <Button fx:id="buttonViewPlayer4" mnemonicParsing="false" onAction="#viewPlayer4" prefHeight="48.0" prefWidth="96.0" text="View Player 4" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
