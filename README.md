@@ -1,5 +1,5 @@
 # Progetto Finale di Ingegneria del Software
-## A.A. 2020-21
+## A.A. 2020-21 Evaluated 30/30 by Politecnico di Milano
 
 ### Group GC03
 * Matteo Regge ([root-kawaii](https://github.com/root-kawaii))
