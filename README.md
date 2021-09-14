@@ -4,7 +4,7 @@
 ### Group GC03
 * Matteo Regge ([root-kawaii](https://github.com/root-kawaii))
 * Nicolas Rossi ([Red-debu](https://github.com/Red-debu))
-* ([AeroLALO](https://github.com/AeroLALO))
+* Alessandro Rovelli ([AeroLALO](https://github.com/AeroLALO))
 
 ### Features
 * Complete Ruleset
